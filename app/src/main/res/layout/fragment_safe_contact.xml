@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_safe_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin_top_contact_element"
+        android:backgroundTint="@color/cyan_100"
+        app:cardCornerRadius="@dimen/cornerRadius_all_card"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/cyan_300"
+        app:strokeWidth="@dimen/strokeWidth_all_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/padding_horizontal_elements_outter"
+            android:paddingVertical="@dimen/padding_vertical_elements_outter">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_safecontact_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/safeContact_exampleUserName"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize_all_text_small"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_recyclerview_element_card"
+                    android:backgroundTint="@color/cyan_100_condensed"
+                    app:cardCornerRadius="@dimen/cornerRadius_all_card_small"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/padding_horizontal_elements_inner"
+                        android:paddingVertical="@dimen/padding_vertical_elements_inner">
+
+                        <TextView
+                            android:id="@+id/textview_safecontact_safe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/safeContact_status"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textview_safecontact_statustime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/margin_left_recyclerview_element_text"
+                            android:text="@string/safeContact_updateTime"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+                android:contentDescription="@string/all_continueImageDescription" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_events"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.hda.fbi.nzse.sose22.iamsafe.EventsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/padding_horizontal_layout_recyclerview"
+        tools:layout_editor_absoluteX="@dimen/editor_absoluteX_recyclerView"
+        tools:layout_editor_absoluteY="@dimen/editor_absoluteY_recyclerView">
+
+        <TextView
+            android:id="@+id/textview_events_activeevents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="0"
+            android:fontFamily="@font/inter"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/layout_margin_top_recyclerview"
+            android:textColor="@color/black"
+            android:text="@string/event_active"
+            android:textSize="@dimen/textSize_all_text" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_events_activeeventslist"
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <TextView
+            android:id="@+id/textview_events_expiredevents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="@font/inter"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/layout_margin_top_recyclerview"
+            android:textSize="@dimen/textSize_all_text"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/padding_top_recyclerview"
+            android:text="@string/event_expired" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_events_expiredeventslist"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/padding_bottom_recyclerview"
+            android:layout_height="0dp"
+            android:paddingTop="@dimen/padding_top_recyclerview"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingactionbutton_events_addevent"
+        android:layout_width="@dimen/layout_width_recylerview_floating_button"
+        android:layout_height="@dimen/layout_height_recylerview_floating_button"
+        android:layout_margin="@dimen/layout_margin_recyclerview_floating_button"
+        android:background="@color/black"
+        android:backgroundTint="@color/cyan_100"
+        android:src="@drawable/ic_add_event_24dp"
+        app:tint="@color/cyan_500"
+        app:backgroundTint="@color/cyan_300"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:rippleColor="@color/black"
+        android:contentDescription="@string/events_addEventDescription"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

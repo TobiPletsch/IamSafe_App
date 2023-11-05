@@ -1,0 +1,147 @@
+<resources>
+    <string name="app_name">IamSafe</string>
+
+    <!-- Text on each fragment for easier Identification -->
+    <string name="fragmentIdentifier_safe">Safe Fragment</string>
+    <string name="fragmentIdentifier_contacts">Contacts Fragment</string>
+    <string name="fragmentIdentifier_events">Events Fragment</string>
+
+    <!-- BOTNAV Strings to display below icons -->
+    <string name="botnav_button_safe">SAFE</string>
+    <string name="botnav_button_contacts">Contacts</string>
+    <string name="botnav_button_events">Events</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contacts_invite_button_description">Invite a new user</string>
+    <string name="options_menu_open_settings">Open Settings</string>
+
+    <!-- Strings for Event RecycleView-->-->
+    <string name="event_title_EMPTY">No Event Name</string>
+    <string name="event_title_example1">Event</string>
+    <string name="event_description">Event_Desc</string>
+    <string name="event_active">Active Events</string>
+    <string name="event_expired">Expired Events</string>
+    <string name="event_nameEventInput">Name Event</string>
+    <string name="event_timeEvent">Zeitraum</string>
+    <string name="event_addPerson"><b>+</b> Person</string>
+    <string name="event_eventDescription">Beschreibung</string>
+    <string name="event_createEvent"><b>Bestätigen</b></string>
+
+    <!-- Strings for Contact RecycleView-->
+    <string name="contact_marked_safe">Marked as safe</string>
+    <string name="contact_marked_unknown">Unknown status</string>
+    <string name="contact_name">Name</string>
+    <string name="contact_status">Safe</string>
+    <string name="contact_statusTime">12min ago</string>
+
+    <!-- Strings for Contact Activity-->
+    <string name="contacts_recyclerview_markedassafedescription">list with contacts that have set their status to safe</string>
+    <string name="contacts_recyclerview_unknownstatusdescription">list with contacts that have an unknown status</string>
+
+    <!-- Strings for Contact DetailView-->
+    <string name="contact_detailview_defaultName">Default Name</string>
+    <string name="contact_detailview_btn_lookAtLocation">View their location</string>
+    <string name="contact_detailview_mtf_muteContact">Contact unmuted</string>
+    <string name="contact_detailview_mtf_unmuteContact">Contact muted</string>
+    <string name="contact_detailview_btn_enableLocSharing">Location sharing disabled</string>
+    <string name="contact_detailview_btn_disableLocSharing">Location sharing enabled</string>
+    <string name="contact_detailview_btn_deleteContact">Delete contact</string>
+    <string name="contact_detailview_lastupdate_unknown">unknown</string>
+    <string name="contact_detailview_googlemapspreviewdescription">google maps preview</string>
+
+    <!-- Strings for Safe Fragment-->
+    <string name="safe_select_event">Select the contacts to broadcast to</string>
+    <string name="safe_button_text">I am safe</string>
+    <string name="safe_last_status_set">Last status set</string>
+    <string name="safe_title_activity_settings">SettingsActivity</string>
+    <string name="safe_hold_button_info">Hold 2 seconds to mark yourself as safe</string>
+    <string name="safe_buttonSafeDescription">Signal that you are safe</string>
+    <string name="safe_groupChooserHint">Choose who to send an update to</string>
+    <string name="safe_currentTime">Not set a status yet</string>
+    <string name="safe_spinnerdescription">select all contacts or an event to send your status to</string>
+    <string name="safe_statusSet_justnow">Just now</string>
+
+
+    <!-- Strings for Login Activity -->
+    <string name="login_enter_username">Please enter your username:</string>
+    <string name="login_hint_input_username">Username</string>
+    <string name="login_enter_password">Please enter your password:</string>
+    <string name="login_hint_input_password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="login_hint_button">Send username and password to log into the app</string>
+    <string name="login_forgot_password">Forgot password</string>
+
+    <!-- Strings for Forgot Password Popup Activity -->
+    <string name="popupForgotPassword_emailHint">Email address</string>
+    <string name="popupForgotPassword_sendEmailHint">Send E-Mail</string>
+    <string name="popupForgotPassword_sendEmail">Send E-Mail</string>
+    <string name="popupForgotPassword_cancelHint">Cancel</string>
+    <string name="popupForgotPassword_cancel">Cancel</string>
+
+    <!-- Strings for Active Event Item Fragment -->
+    <string name="activeEventItem_imageDescription">Shows an image associated to the event</string>
+    <string name="activeEventItem_attendeeCount">19</string>
+
+    <!-- Strings for Contact Detail View Fragment -->
+    <string name="contactDetailView_exampleUserName">Johnny Depp</string>
+    <string name="contactDetailView_status">SAFE</string>
+    <string name="contactDetailView_time">14 min ago</string>
+    <string name="contactDetailView_buttonViewLocation">View their location</string>
+    <string name="contactDetailView_buttonMuteContact">Mute contact</string>
+    <string name="contactDetailView_buttonDisableLocationSharing">Disable location sharing</string>
+    <string name="contactDetailView_buttonDeleteContact">Delete contact</string>
+    <string name="contactDetailView_buttonMuteContactDescription">Disable push notifications for this contact</string>
+    <string name="contactDetailView_buttonDisableLocationSharingDescription">Disable your location sharing for this contact</string>
+    <string name="contactDetailView_buttonDeleteContactDescription">Delete this contact</string>
+
+    <!-- Strings for Create Event Fragment -->
+    <string name="createEvent_eventName">Event name</string>
+    <string name="createEvent_description">Description</string>
+    <string name="createEvent_descriptionHint">Event description</string>
+    <string name="createEvent_editDateRange">Edit date range</string>
+    <string name="createEvent_buttonAddParticipant">Add Participants</string>
+    <string name="createEvent_buttonCreate">Create</string>
+
+    <!-- Strings for Event Detail View Fragment -->
+    <string name="eventDetailView_eventName">Event name</string>
+    <string name="eventDetailView_eventDescription">Description</string>
+    <string name="eventDetailView_editDateRange">Edit date range</string>
+    <string name="eventDetailView_editParticipants">Edit Participants</string>
+    <string name="eventDetailView_buttonSave">Save</string>
+    <string name="eventdetailview_deletebuttondescription">Delete this event</string>
+
+    <!-- Strings for EditContacts under Event Detail View Fragment -->
+    <string name="editContacts_Contacts">Participants</string>
+
+    <!-- Strings for Events Fragment-->
+    <string name="events_addEventDescription">Add Event</string>
+
+    <!-- Strings for Safe Contact Fragment -->
+    <string name="safeContact_exampleUserName">Kevin Trapp</string>
+    <string name="safeContact_status">SAFE</string>
+    <string name="safeContact_updateTime">14 min ago</string>
+
+    <!-- Strings for Event Detail View Not Owner Fragment -->
+    <string name="detailNotOwner_event_name">Event name</string>
+    <string name="detailNotOwner_event_description">Event description</string>
+    <string name="detailNotOwner_event_daterange">August 9th 2022 - August 22th 2022</string>
+    <string name="detailNotOwner_event_leavebutton">Leave event</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="condensedListItem_exampleUserName">Kevin Trapp</string>
+
+    <!-- Strings for elements used in multiple fragments -->
+    <string name="all_continueImageDescription">Continue</string>
+</resources>

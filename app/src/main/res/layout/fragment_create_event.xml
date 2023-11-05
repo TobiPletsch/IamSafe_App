@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context="de.hda.fbi.nzse.sose22.iamsafe.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainedlayout_createevent_inputs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_createevent_createevent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textinputlayout_createevent_eventname"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="@dimen/cornerRadius_all_text"
+            app:boxCornerRadiusBottomStart="@dimen/cornerRadius_all_text"
+            app:boxCornerRadiusTopEnd="@dimen/cornerRadius_all_text"
+            app:boxCornerRadiusTopStart="@dimen/cornerRadius_all_text"
+            app:boxStrokeColor="@color/cyan_600"
+            app:boxStrokeWidth="@dimen/strokeWidth_all_text"
+            android:hint="@string/createEvent_eventName"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/textinputlayout_createevent_eventdescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinput_createevent_eventname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/createEvent_eventName"
+                android:singleLine="true"
+                android:textColor="@color/cyan_600"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/cyan_600" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textinputlayout_createevent_eventdescription"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:boxCornerRadiusBottomEnd="@dimen/cornerRadius_all_text"
+            app:boxCornerRadiusBottomStart="@dimen/cornerRadius_all_text"
+            app:boxCornerRadiusTopEnd="@dimen/cornerRadius_all_text"
+            app:boxCornerRadiusTopStart="@dimen/cornerRadius_all_text"
+            app:boxStrokeColor="@color/cyan_600"
+            app:boxStrokeWidth="@dimen/strokeWidth_all_text"
+            android:hint="@string/createEvent_descriptionHint"
+            app:hintTextColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/cardview_createevent_showdaterange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textinputlayout_createevent_eventname"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinput_createevent_eventdescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/createEvent_descriptionHint"
+                android:singleLine="false"
+                android:textColor="@color/cyan_600"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/cyan_600" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardview_createevent_showdaterange"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_createevent_editparticipants"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textinputlayout_createevent_eventdescription"
+            app:layout_constraintVertical_bias="0.0"
+            app:strokeWidth="@dimen/strokeWidth_all_button"
+            app:strokeColor="@color/cyan_100"
+            app:cardCornerRadius="@dimen/cornerRadius_all_card"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainedlayout_createevent_showdaterange"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cyan_600"
+                android:minHeight="@dimen/minHeight_all_clickableText">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textview_createevent_showdaterange"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:fontFamily="@font/inter"
+                    android:importantForAccessibility="yes"
+                    android:text="@string/createEvent_editDateRange"
+                    android:textAlignment="center"
+                    android:textColor="@color/cyan_100"
+                    android:textSize="@dimen/textSize_all_text_small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="20dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="20dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="20dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_createevent_editparticipants"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/cyan_600"
+            android:fontFamily="@font/inter"
+            android:importantForAccessibility="yes"
+            android:text="@string/createEvent_buttonAddParticipant"
+            android:textColor="@color/cyan_100"
+            app:cornerRadius="@dimen/cornerRadius_all_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_createevent_showdaterange"
+            app:layout_constraintVertical_bias="0.0"
+            app:rippleColor="@color/cyan_100_condensed"
+            app:strokeColor="@color/cyan_100"
+            app:strokeWidth="@dimen/strokeWidth_all_button"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_createevent_createevent"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_all_button"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/cyan_600"
+        android:importantForAccessibility="yes"
+        android:text="@string/createEvent_buttonCreate"
+        android:textColor="@color/cyan_100"
+        app:cornerRadius="@dimen/cornerRadius_all_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constrainedlayout_createevent_inputs"
+        app:layout_constraintVertical_bias="1.0"
+        app:rippleColor="@color/cyan_100_condensed"
+        app:strokeColor="@color/cyan_100"
+        app:strokeWidth="@dimen/strokeWidth_all_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

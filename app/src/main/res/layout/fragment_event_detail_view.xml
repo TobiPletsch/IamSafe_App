@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context="de.hda.fbi.nzse.sose22.iamsafe.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainedlayout_eventdetailview_inputs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearlayout_eventdetailview_saveordelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textinputlayout_eventdetailview_eventname"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_all_16"
+            android:layout_marginTop="@dimen/layout_margin_all_16"
+            android:layout_marginEnd="@dimen/layout_margin_all_16"
+            android:hint="@string/eventDetailView_eventName"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="@dimen/cornerRadius_all_card"
+            app:boxCornerRadiusBottomStart="@dimen/cornerRadius_all_card"
+            app:boxCornerRadiusTopEnd="@dimen/cornerRadius_all_card"
+            app:boxCornerRadiusTopStart="@dimen/cornerRadius_all_card"
+            app:boxStrokeColor="@color/cyan_600"
+            app:boxStrokeWidth="@dimen/strokeWidth_all_text"
+            app:layout_constraintBottom_toTopOf="@+id/textinputlayout_eventdetailview_eventdescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinput_eventdetailview_eventname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/eventDetailView_eventName"
+                android:textColorHint="@color/black"
+                android:singleLine="true"
+                android:textColor="@color/cyan_600"
+                app:boxStrokeColor="@color/cyan_600" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textinputlayout_eventdetailview_eventdescription"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_all_16"
+            android:layout_marginTop="@dimen/layout_margin_all_16"
+            android:layout_marginEnd="@dimen/layout_margin_all_16"
+            android:hint="@string/eventDetailView_eventDescription"
+            android:textColorHint="@color/black"
+            app:boxCornerRadiusBottomEnd="@dimen/cornerRadius_all_card"
+            app:boxCornerRadiusBottomStart="@dimen/cornerRadius_all_card"
+            app:boxCornerRadiusTopEnd="@dimen/cornerRadius_all_card"
+            app:boxCornerRadiusTopStart="@dimen/cornerRadius_all_card"
+            app:boxStrokeColor="@color/cyan_600"
+            app:boxStrokeWidth="@dimen/strokeWidth_all_text"
+            app:layout_constraintBottom_toTopOf="@+id/cardview_eventdetailview_showdaterange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textinputlayout_eventdetailview_eventname"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinput_eventdetailview_eventdescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/eventDetailView_eventDescription"
+                android:textColorHint="@color/black"
+                android:singleLine="false"
+                android:textColor="@color/cyan_600"
+                app:boxStrokeColor="@color/cyan_600" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardview_eventdetailview_showdaterange"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_eventdetailview_editparticipants"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textinputlayout_eventdetailview_eventdescription"
+            app:layout_constraintVertical_bias="0.0"
+            app:strokeWidth="@dimen/strokeWidth_all_button"
+            app:strokeColor="@color/cyan_100"
+            app:cardCornerRadius="@dimen/cornerRadius_all_card"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainedlayout_eventdetailview_showdaterange"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cyan_600"
+                android:minHeight="@dimen/minHeight_all_clickableText"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textview_eventdetailview_showdaterange"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:fontFamily="@font/inter"
+                    android:importantForAccessibility="yes"
+                    android:layout_marginHorizontal="12dp"
+                    android:textSize="@dimen/textSize_all_text_small"
+                    android:text="@string/createEvent_editDateRange"
+                    android:textAlignment="center"
+                    android:textColor="@color/cyan_100"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_eventdetailview_editparticipants"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_all_button"
+            android:layout_marginStart="@dimen/layout_margin_all_16"
+            android:layout_marginTop="@dimen/layout_margin_all_16"
+            android:layout_marginEnd="@dimen/layout_margin_all_16"
+            android:backgroundTint="@color/cyan_600"
+            android:fontFamily="@font/inter"
+            android:importantForAccessibility="yes"
+            android:text="@string/eventDetailView_editParticipants"
+            android:textColor="@color/cyan_100"
+            app:cornerRadius="@dimen/cornerRadius_all_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_eventdetailview_showdaterange"
+            app:layout_constraintVertical_bias="0.0"
+            app:rippleColor="@color/cyan_100_condensed"
+            app:strokeColor="@color/cyan_100"
+            app:strokeWidth="@dimen/strokeWidth_all_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_eventdetailview_saveordelete"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_all_button"
+        android:layout_marginStart="@dimen/layout_margin_all_16"
+        android:layout_marginTop="@dimen/layout_margin_all_16"
+        android:layout_marginEnd="@dimen/layout_margin_all_16"
+        android:layout_marginBottom="@dimen/layout_margin_all_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constrainedlayout_eventdetailview_inputs"
+        app:layout_constraintVertical_bias="1.0">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_eventdetailview_saveevent"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_all_button"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="5"
+            android:backgroundTint="@color/cyan_600"
+            android:importantForAccessibility="yes"
+            android:text="@string/eventDetailView_buttonSave"
+            android:textColor="@color/cyan_100"
+            app:cornerRadius="@dimen/cornerRadius_all_button"
+            app:rippleColor="@color/cyan_100_condensed"
+            app:strokeColor="@color/cyan_100"
+            app:strokeWidth="@dimen/strokeWidth_all_button" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_eventdetailview_deleteevent"
+            android:layout_width="65dp"
+            android:layout_height="@dimen/height_all_button"
+            android:layout_marginStart="@dimen/layout_marginStart_all"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/eventdetailview_deletebuttondescription"
+            android:backgroundTint="@color/delete_button_color"
+            android:importantForAccessibility="yes"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/cornerRadius_all_button"
+            app:icon="@drawable/ic_trash"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="@color/white"
+            app:rippleColor="@color/delete_button_stroke_color"
+            app:strokeColor="@color/delete_button_stroke_color"
+            app:strokeWidth="@dimen/strokeWidth_all_button" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

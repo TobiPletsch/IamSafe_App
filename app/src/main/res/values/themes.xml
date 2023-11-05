@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <!-- Base application theme. -->
+    <style name="Theme.IamSafe" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+
+        <item name="colorPrimary">@color/cyan_600</item>
+        <item name="colorPrimaryVariant">@color/cyan_200</item>
+        <item name="colorOnPrimary">@color/cyan_600</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/cyan_300</item>
+        <item name="colorSecondaryVariant">@color/cyan_100</item>
+        <item name="colorOnSecondary">@color/cyan_300</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorOnSecondary</item>
+        <!-- Customize your theme here. -->
+        <item name="android:navigationBarColor">@color/cyan_100_condensed_40</item>
+
+        <item name="android:actionOverflowButtonStyle">@style/MyOverFlow</item>
+    </style>
+
+    <style name="MyOverFlow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_settings</item>
+    </style>
+
+    <style name="MaterialCalendarTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorOnPrimary">@color/cyan_100_condensed</item>
+        <item name="colorPrimary">@color/cyan_400</item>
+        <item name="colorSecondary">@color/cyan_400</item>
+        <item name="selectionRequired">true</item>
+        <item name="selectableItemBackground">@color/cyan_400</item>
+    </style>
+
+</resources>

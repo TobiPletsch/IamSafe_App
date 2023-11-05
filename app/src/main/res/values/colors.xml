@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cyan_100_condensed">#F0FCF9</color>
+    <color name="cyan_100_condensed_40">#E7F8F5</color>
+    <color name="cyan_100">#C2F4E7</color>
+    <color name="cyan_200">#9DD0CC</color>
+    <color name="cyan_300">#7CACB0</color>
+    <color name="cyan_400">#5F8993</color>
+    <color name="cyan_500">#466876</color>
+    <color name="cyan_600">#2F4858</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="delete_button_color">#FF0000</color>
+    <color name="delete_button_stroke_color">#C00000</color>
+
+    <color name="safe_button_success">#69C2A7</color>
+
+
+</resources>

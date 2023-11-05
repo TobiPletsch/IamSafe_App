@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/safeFragment"
+        android:icon="@drawable/ic_botnav_safe"
+        android:title="SAFE"
+        android:fontFamily="@font/inter" />
+    <item
+        android:id="@+id/contactsFragment"
+        android:icon="@drawable/ic_botnav_contacts"
+        android:title="@string/botnav_button_contacts"
+        android:fontFamily="@font/inter" />
+    <item
+        android:id="@+id/eventsFragment"
+        android:icon="@drawable/ic_botnav_events"
+        android:title="@string/botnav_button_events"
+        android:fontFamily="@font/inter"/>
+</menu>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrainedLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventDetailsViewOnlyFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_eventdetailviewnotowner_eventname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/layout_margin_all_32"
+        android:layout_marginEnd="16dp"
+        android:text="@string/detailNotOwner_event_name"
+        android:textAlignment="center"
+        android:textColor="@color/cyan_600"
+        android:textSize="@dimen/textSize_all_text"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textview_eventdetailviewnotowner_eventdescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_eventdetailviewnotowner_eventdescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/layout_margin_all_16"
+        android:layout_marginEnd="16dp"
+        android:text="@string/detailNotOwner_event_description"
+        android:textAlignment="center"
+        android:textColor="@color/cyan_600"
+        android:textSize="@dimen/textSize_all_text_small"
+        app:layout_constraintBottom_toTopOf="@+id/textview_eventdetailviewnotowner_eventdaterange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_eventdetailviewnotowner_eventname" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_eventdetailviewnotowner_eventdaterange"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/layout_margin_all_16"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/detailNotOwner_event_daterange"
+        android:textAlignment="center"
+        android:textColor="@color/cyan_600"
+        android:textSize="@dimen/textSize_all_text_small"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview_eventdetailviewnotowner_participantlist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_eventdetailviewnotowner_eventdescription" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_eventdetailviewnotowner_participantlist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/button_eventdetailviewnotowner_leaveevent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_eventdetailviewnotowner_eventdaterange">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_eventdetailviewnotowner_leaveevent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_all_button"
+        android:layout_marginStart="@dimen/layout_marginStart_all"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/layout_marginEnd_all"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/cyan_600"
+        android:backgroundTintMode="src_in"
+        android:fontFamily="@font/inter"
+        android:hint="@string/detailNotOwner_event_leavebutton"
+        android:importantForAccessibility="yes"
+        android:text="@string/detailNotOwner_event_leavebutton"
+        android:textColor="@color/cyan_100"
+        app:cornerRadius="@dimen/cornerRadius_all_button"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview_eventdetailviewnotowner_participantlist"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="@color/delete_button_color"
+        app:strokeColor="@color/cyan_100"
+        app:strokeWidth="@dimen/strokeWidth_all_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

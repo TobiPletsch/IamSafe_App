@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "787728501396",
+    "project_id": "iamsafe-bb635",
+    "storage_bucket": "iamsafe-bb635.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787728501396:android:ed0279d1a5d9e960380281",
+        "android_client_info": {
+          "package_name": "de.hda.fbi.nzse.sose22.iamsafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787728501396-iq3ajjks4flkgbckod3gntguaoitv9gf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "de.hda.fbi.nzse.sose22.iamsafe",
+            "certificate_hash": "7641d3406f9c66c58a058123b61d9f48c867d1c1"
+          }
+        },
+        {
+          "client_id": "787728501396-i650m50dgdfletkaae76906gnn3pj3ft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoHwo-dhtWxskRg8luWmGYWGpNjXxUFhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787728501396-i650m50dgdfletkaae76906gnn3pj3ft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,62 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <PreferenceCategory app:title="">
+
+        <SwitchPreferenceCompat
+            app:key="sounds"
+            app:title="Sounds" />
+
+        <SwitchPreferenceCompat
+            app:key="theme"
+            app:title="Dark Theme" />
+
+        <SwitchPreferenceCompat
+            app:key="push"
+            app:title="Push" />
+
+        <SwitchPreferenceCompat
+            app:key="time_format_eu"
+            app:title="Time format: EU" />
+
+        <SwitchPreferenceCompat
+            app:dependency="time_format_eu"
+            app:key="time_format_us"
+            app:title="Time format: US" />
+
+    </PreferenceCategory>
+
+    <!--  <PreferenceCategory app:title="Settings">
+
+        <EditTextPreference
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="reply"
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:key="reply"
+            app:title="@string/reply_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+     <PreferenceCategory app:title="@string/sync_header">
+
+        <SwitchPreferenceCompat
+            app:key="sync"
+            app:title="@string/sync_title" />
+
+        <SwitchPreferenceCompat
+            app:dependency="sync"
+            app:key="attachment"
+            app:summaryOff="@string/attachment_summary_off"
+            app:summaryOn="@string/attachment_summary_on"
+            app:title="@string/attachment_title" />
+
+    </PreferenceCategory>  -->
+
+
+</PreferenceScreen>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cornerRadius_all_button">12dp</dimen>
+    <dimen name="cornerRadius_all_text">12dp</dimen>
+    <dimen name="cornerRadius_all_card">12dp</dimen>
+    <dimen name="cornerRadius_all_card_small">8dp</dimen>
+    <dimen name="cornerRadius_safe_button">300dp</dimen>
+
+    <dimen name="layout_margin_all_4">4dp</dimen>
+    <dimen name="layout_margin_all_8">8dp</dimen>
+    <dimen name="layout_margin_all_16">16dp</dimen>
+    <dimen name="layout_margin_all_24">24dp</dimen>
+    <dimen name="layout_margin_all_32">32dp</dimen>
+
+    <dimen name="layout_marginStart_all">16dp</dimen>
+    <dimen name="layout_marginEnd_all">16dp</dimen>
+    <dimen name="layout_margin_recyclerview_floating_button">16dp</dimen>
+    <dimen name="layout_margin_top_recyclerview">30dp</dimen>
+    <dimen name="layout_margin_start_contact_detail_action_button">24dp</dimen>
+    <dimen name="layout_margin_end_contact_detail_action_button">24dp</dimen>
+    <dimen name="layout_margin_top_contact_detail_action_button">8dp</dimen>
+    <dimen name="layout_margin_start_contact_detail_action_text">8dp</dimen>
+    <dimen name="layout_margin_end_contact_detail_action_text">8dp</dimen>
+    <dimen name="layout_margin_top_contact_detail_action_text">4dp</dimen>
+    <dimen name="layout_margin_top_contact_element">16dp</dimen>
+    <dimen name="margin_left_recyclerview_element_card">10dp</dimen>
+    <dimen name="margin_left_recyclerview_element_text">5dp</dimen>
+
+    <dimen name="strokeWidth_safe_button">4dp</dimen>
+    <dimen name="strokeWidth_all_button">2dp</dimen>
+    <dimen name="strokeWidth_all_card">1dp</dimen>
+    <dimen name="strokeWidth_all_text">2dp</dimen>
+
+    <dimen name="height_all_button">65dp</dimen>
+    <dimen name="minHeight_all_clickableText">48sp</dimen>
+    <dimen name="layout_height_recylerview_floating_button">55dp</dimen>
+    <dimen name="layout_height_contact_detail_action_text">60dp</dimen>
+
+    <dimen name="layout_width_recylerview_floating_button">63dp</dimen>
+    <dimen name="layout_width_contact_detail_action_button">65dp</dimen>
+    <dimen name="layout_width_contact_detail_action_text">60dp</dimen>
+
+    <dimen name="textSize_all_button">22sp</dimen>
+    <dimen name="textSize_all_text">22sp</dimen>
+    <dimen name="textSize_all_text_small">16sp</dimen>
+
+    <dimen name="iconSize_safe_icon">100dp</dimen>
+
+    <dimen name="editor_absoluteX_recyclerView">7dp</dimen>
+    <dimen name="editor_absoluteY_recyclerView">198dp</dimen>
+
+    <dimen name="padding_horizontal_layout_recyclerview">18dp</dimen>
+    <dimen name="padding_top_recyclerview">15dp</dimen>
+    <dimen name="padding_bottom_recyclerview">20dp</dimen>
+    <dimen name="padding_horizontal_elements_outter">20dp</dimen>
+    <dimen name="padding_vertical_elements_outter">14dp</dimen>
+    <dimen name="padding_horizontal_elements_inner">15dp</dimen>
+    <dimen name="padding_vertical_elements_inner">5dp</dimen>
+
+</resources>

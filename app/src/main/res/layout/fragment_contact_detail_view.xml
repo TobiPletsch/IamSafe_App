@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutContactDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.hda.fbi.nzse.sose22.iamsafe.ContactDetailViewFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayout_contactdetailview_nameandstatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/cardview_contactdetailview_googlemapspreview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textview_contactdetailview_contactname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contactDetailView_exampleUserName"
+            android:textColor="@color/cyan_600"
+            android:textSize="@dimen/textSize_all_text"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cardview_contactdetailview_statuslabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardview_contactdetailview_statuslabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_all_16"
+            android:backgroundTint="@color/cyan_100_condensed"
+            app:cardCornerRadius="@dimen/cornerRadius_all_card_small"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_contactdetailview_contactname"
+            app:layout_constraintVertical_bias="0.0"
+            app:strokeColor="@color/cyan_600"
+            app:strokeWidth="@dimen/strokeWidth_all_card">
+
+            <LinearLayout
+                android:id="@+id/linearlayout_contactdetailview_statuslabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:id="@+id/statusLabelContactDetailStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/contactDetailView_status"
+                    android:textColor="@color/cyan_600"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/textview_safe_statusdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/contactDetailView_time"
+                    android:textColor="@color/cyan_600" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview_contactdetailview_googlemapspreview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/layout_marginStart_all"
+        android:layout_marginEnd="@dimen/layout_marginEnd_all"
+        android:foreground="@android:drawable/ic_dialog_map"
+        android:foregroundTint="@color/cyan_600"
+        app:cardCornerRadius="@dimen/cornerRadius_all_card"
+        app:layout_constraintBottom_toTopOf="@+id/cardview_contactdetailview_actionbuttons"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintlayout_contactdetailview_nameandstatus"
+        app:strokeColor="@color/cyan_600"
+        app:strokeWidth="@dimen/strokeWidth_all_card">
+
+        <ImageView
+            android:id="@+id/image_contactdetailview_googlemapspreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/contact_detailview_googlemapspreviewdescription"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:srcCompat="@drawable/googlemaps_preview">
+
+        </ImageView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_contactdetailview_opengooglemaps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/cyan_600"
+            android:padding="15dp"
+            android:text="@string/contactDetailView_buttonViewLocation"
+            android:textColor="@color/cyan_100"
+            app:rippleColor="@color/cyan_100_condensed"
+            app:strokeColor="@color/cyan_100"
+            app:strokeWidth="@dimen/strokeWidth_all_button">
+
+        </com.google.android.material.button.MaterialButton>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview_contactdetailview_actionbuttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_marginStart_all"
+        android:layout_marginEnd="@dimen/layout_marginEnd_all"
+        app:cardCornerRadius="@dimen/cornerRadius_all_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview_contactdetailview_googlemapspreview"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="@color/cyan_600"
+        app:strokeWidth="@dimen/strokeWidth_all_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout_contactdetailview_actionbuttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_contactdetailview_mutecontact"
+                android:layout_width="@dimen/layout_width_contact_detail_action_button"
+                android:layout_height="@dimen/height_all_button"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/cyan_600"
+                android:contentDescription="@string/contactDetailView_buttonMuteContactDescription"
+                android:importantForAccessibility="yes"
+                app:cornerRadius="@dimen/cornerRadius_all_button"
+                app:icon="@android:drawable/ic_lock_silent_mode"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@color/cyan_100"
+                app:layout_constraintBottom_toTopOf="@+id/textview_contactdetailview_mutecontact"
+                app:layout_constraintEnd_toStartOf="@+id/button_contactdetailview_stoplocationsharing"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:rippleColor="@color/cyan_100_condensed"
+                app:strokeColor="@color/cyan_100"
+                app:strokeWidth="@dimen/strokeWidth_all_button" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textview_contactdetailview_mutecontact"
+                android:layout_width="@dimen/layout_width_contact_detail_action_text"
+                android:layout_height="@dimen/layout_height_contact_detail_action_text"
+                android:layout_marginBottom="8dp"
+                android:text="@string/contactDetailView_buttonMuteContact"
+                android:textAlignment="center"
+                android:textColor="@color/cyan_600"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textview_contactdetailview_stoplocationsharing"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_contactdetailview_mutecontact" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_contactdetailview_stoplocationsharing"
+                android:layout_width="@dimen/layout_width_contact_detail_action_button"
+                android:layout_height="@dimen/height_all_button"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/cyan_600"
+                android:contentDescription="@string/contactDetailView_buttonDisableLocationSharingDescription"
+                android:importantForAccessibility="yes"
+                app:cornerRadius="@dimen/cornerRadius_all_button"
+                app:icon="@drawable/ic_location_stop_sharing"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@color/cyan_100"
+                app:layout_constraintBottom_toTopOf="@+id/textview_contactdetailview_stoplocationsharing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_contactdetailview_deletecontact"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_contactdetailview_mutecontact"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:rippleColor="@color/cyan_100_condensed"
+                app:strokeColor="@color/cyan_100"
+                app:strokeWidth="@dimen/strokeWidth_all_button" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textview_contactdetailview_stoplocationsharing"
+                android:layout_width="@dimen/layout_width_contact_detail_action_text"
+                android:layout_height="@dimen/layout_height_contact_detail_action_text"
+                android:layout_marginBottom="8dp"
+                android:text="@string/contactDetailView_buttonDisableLocationSharing"
+                android:textAlignment="center"
+                android:textColor="@color/cyan_600"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textview_contactdetailview_deletecontact"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textview_contactdetailview_mutecontact"
+                app:layout_constraintTop_toBottomOf="@+id/button_contactdetailview_stoplocationsharing" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_contactdetailview_deletecontact"
+                android:layout_width="@dimen/layout_width_contact_detail_action_button"
+                android:layout_height="@dimen/height_all_button"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/delete_button_color"
+                android:contentDescription="@string/contactDetailView_buttonDeleteContactDescription"
+                android:importantForAccessibility="yes"
+                app:cornerRadius="@dimen/cornerRadius_all_button"
+                app:icon="@drawable/ic_trash"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/textview_contactdetailview_deletecontact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_contactdetailview_stoplocationsharing"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:rippleColor="@color/delete_button_stroke_color"
+                app:strokeColor="@color/delete_button_stroke_color"
+                app:strokeWidth="@dimen/strokeWidth_all_button" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textview_contactdetailview_deletecontact"
+                android:layout_width="@dimen/layout_width_contact_detail_action_text"
+                android:layout_height="@dimen/layout_height_contact_detail_action_text"
+                android:layout_marginBottom="8dp"
+                android:text="@string/contactDetailView_buttonDeleteContact"
+                android:textAlignment="center"
+                android:textColor="@color/cyan_600"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textview_contactdetailview_stoplocationsharing"
+                app:layout_constraintTop_toBottomOf="@+id/button_contactdetailview_deletecontact" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

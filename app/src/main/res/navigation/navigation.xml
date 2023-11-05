@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/safeFragment">
+
+
+    <fragment
+        android:id="@+id/safeFragment"
+        android:name="de.hda.fbi.nzse.sose22.iamsafe.SafeFragment"
+        android:label="Safe"
+        android:fontFamily="@font/inter"
+        tools:layout="@layout/fragment_safe" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="de.hda.fbi.nzse.sose22.iamsafe.ContactsFragment"
+        android:label="Contacts"
+        android:fontFamily="@font/inter"
+        tools:layout="@layout/fragment_contacts" >
+        <action
+            android:id="@+id/action_contactsFragment_to_contactDetailViewFragment"
+            app:destination="@id/contactDetailViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="de.hda.fbi.nzse.sose22.iamsafe.EventsFragment"
+        android:label="Events"
+        android:fontFamily="@font/inter"
+        tools:layout="@layout/fragment_events" >
+        <action
+            android:id="@+id/action_eventsFragment_to_createEventFragment"
+            app:destination="@id/createEventFragment" />
+        <action
+            android:id="@+id/action_eventsFragment_to_eventDetailViewFragment"
+            app:destination="@id/eventDetailViewFragment" />
+        <action
+            android:id="@+id/action_eventsFragment_to_eventDetailsViewNotOwnerFragment"
+            app:destination="@id/eventDetailsViewNotOwnerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactDetailViewFragment"
+        android:name="de.hda.fbi.nzse.sose22.iamsafe.ContactDetailViewFragment"
+        android:label="Detail View"
+        tools:layout="@layout/fragment_contact_detail_view" >
+        <action
+            android:id="@+id/action_contactDetailViewFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
+        <argument
+            android:name="statusKnown"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/createEventFragment"
+        android:name="de.hda.fbi.nzse.sose22.iamsafe.CreateEventFragment"
+        android:label="Create Event"
+        tools:layout="@layout/fragment_create_event">
+        <action
+            android:id="@+id/action_createEventFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
+        <action
+            android:id="@+id/action_createEventFragment_to_editContactsCreateEventFragment"
+            app:destination="@id/editContactsCreateEventFragment" />
+    </fragment>
+   <!-- <fragment
+        android:id="@+id/optionsFragment"
+        android:name="com.example.iamsafe.OptionsFragment"
+        android:label="Options"
+        tools:layout="@layout/fragment_options" /> -->
+    <fragment
+        android:id="@+id/eventDetailViewFragment"
+        android:name="de.hda.fbi.nzse.sose22.iamsafe.EventDetailsEditableFragment"
+        android:label="Detail View"
+        tools:layout="@layout/fragment_event_detail_view">
+        <argument
+            android:name="index"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_eventDetailViewFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
+        <argument
+            android:name="isActiveEvent"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_eventDetailViewFragment_to_editContacts"
+            app:destination="@id/editContacts" />
+    </fragment>
+    <fragment
+        android:id="@+id/editContacts"
+        android:name="de.hda.fbi.nzse.sose22.iamsafe.EditParticipantsFragment"
+        android:label="Edit event participants"
+        tools:layout="@layout/fragment_edit_contacts" >
+        <action
+            android:id="@+id/action_editContacts_to_eventDetailViewFragment"
+            app:destination="@id/eventDetailViewFragment" />
+        <argument
+            android:name="pos"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="isActiveEvent"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/editContactsCreateEventFragment"
+        android:name="de.hda.fbi.nzse.sose22.iamsafe.CreateEventAddParticipantsFragment"
+        android:label="Add participants"
+        tools:layout="@layout/fragment_add_participants_create_event">
+        <action
+            android:id="@+id/action_editContactsCreateEventFragment_to_createEventFragment"
+            app:destination="@id/createEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventDetailsViewNotOwnerFragment"
+        android:name="de.hda.fbi.nzse.sose22.iamsafe.EventDetailsViewOnlyFragment"
+        android:label="Detail View"
+        tools:layout="@layout/fragment_event_detail_view_not_owner">
+        <action
+            android:id="@+id/action_eventDetailsViewNotOwnerFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
+        <argument
+            android:name="isActiveEvent"
+            app:argType="boolean" />
+    </fragment>
+</navigation>
